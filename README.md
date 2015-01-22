@@ -1,5 +1,5 @@
-Auto bootstrapping advertise
+Auto bootstrapping advertises
 
 # Yandex Direct
 
-coming AdFox
+coming soon AdFox
