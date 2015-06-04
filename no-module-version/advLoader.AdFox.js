@@ -14,7 +14,7 @@
  ***********************
  */
 
-var AdFox = function() {
+var AdFoxLoader = function() {
 
     // По классу элементов ищем контейнеры для баннеров
     this.key_elements = {
@@ -33,14 +33,14 @@ var AdFox = function() {
 };
 
 // Просто короткая запись прототипа (jQuery Style)
-AdFox.fn = AdFox.prototype;
+AdFoxLoader.fn = AdFoxLoader.prototype;
 
 /*
  * Ищем контейнеры для баннеров
  *
  */
 
-AdFox.fn.getAdFoxEl = function() {
+AdFoxLoader.fn.getAdFoxEl = function() {
 
     var $elements_adv = $(this.key_elements.elements_adv);
 
@@ -57,7 +57,7 @@ AdFox.fn.getAdFoxEl = function() {
  *
  */
 
-AdFox.fn.getAdFoxLib = function() {
+AdFoxLoader.fn.getAdFoxLib = function() {
 
     var self = this,
         lib_src = self.meta_adv.lib_src;
@@ -83,7 +83,7 @@ AdFox.fn.getAdFoxLib = function() {
  *
  */
 
-AdFox.fn.initAdFoxAdv = function() {
+AdFoxLoader.fn.initAdFoxAdv = function() {
 
     var self = this,
         $adv = self.meta_adv.$elements_adv;
@@ -112,7 +112,7 @@ AdFox.fn.initAdFoxAdv = function() {
  *
  */
 
-AdFox.fn.initAdFoxUnit = function(bannerPlaceId, requestSrc) {
+AdFoxLoader.fn.initAdFoxUnit = function(bannerPlaceId, requestSrc) {
 
     var $adv_el = $('#' + bannerPlaceId),
          tgNS = window.ADFOX.RELOAD_CODE,
@@ -136,7 +136,7 @@ AdFox.fn.initAdFoxUnit = function(bannerPlaceId, requestSrc) {
  *
  */
 
-AdFox.fn.init = function() {
+AdFoxLoader.fn.init = function() {
 
     // Получаем элементы
     // Загружаем библиотеку
